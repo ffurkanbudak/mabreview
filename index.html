@@ -1,518 +1,568 @@
-<html lang="tr"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAB U.S. Entity Review | Amerika Şirket Analizi</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
+<html lang="tr" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAB U.S. Entity Review | Amerika Şirket Analizi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        body { font-feature-settings: "cv11", "ss01"; -webkit-font-smoothing: antialiased; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-600 selection:bg-gray-900 selection:text-white font-normal">
 
-<style>
-.gradient-bg {
-background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
-}
-.glass-card {
-background: rgba(255, 255, 255, 0.95);
-backdrop-filter: blur(20px);
-}
-@keyframes float {
-0%, 100% { transform: translateY(0px); }
-50% { transform: translateY(-10px); }
-}
-.animate-float {
-animation: float 3s ease-in-out infinite;
-}
-@keyframes pulse-slow {
-0%, 100% { opacity: 0.4; }
-50% { opacity: 0.8; }
-}
-.animate-pulse-slow {
-animation: pulse-slow 4s ease-in-out infinite;
-}
-</style>
-<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style></head>
-<body class="font-sans antialiased bg-slate-50 text-slate-900">
-
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60">
-        <div class="sm:px-6 lg:px-8 bg-[#ffffff] max-w-7xl mx-auto px-4">
-            <div class="flex bg-[#ffffff] h-16 items-center justify-between">
-                <!-- Logo -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="flex shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow bg-gradient-to-tr from-orange-400 to-orange-600 w-10 h-10 rounded-xl shadow-lg items-center justify-center">
-                        <span class="text-lg font-bold text-white bg-gradient-to-tr from-white/10 to-white/0">MAB</span>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100/50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gray-900 text-white flex items-center justify-center shadow-lg shadow-gray-900/20">
+                        <span class="font-semibold text-sm">M</span>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-sm font-bold text-slate-900 tracking-tight" style="">MAB <span class="text-brand-600">|</span> U.S. Entity Review</span>
-                        <span class="text-[10px] text-slate-500 font-medium -mt-0.5">by MAB Global Partners</span>
+                        <span class="font-medium text-gray-900 text-sm tracking-tight">MAB <span class="text-gray-400">|</span> U.S. Entity Review</span>
+                        <span class="text-[10px] text-gray-400 -mt-0.5">by MAB Global Partners</span>
                     </div>
                 </a>
-
-                <!-- Contact Button -->
-                <a href="mailto:info@mehmetakifbirkan.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium transition-all hover:shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-4 h-4"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
-                    <span class="hidden sm:inline">İletişim</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main class="">
-        <!-- Hero Section -->
-        <section class="relative min-h-screen pt-16 overflow-hidden">
-            <!-- Background -->
-            <div class="absolute inset-0 gradient-bg">
-                <!-- Decorative Elements -->
-                <div class="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse-slow"></div>
-                <div class="absolute bottom-20 right-10 w-96 h-96 bg-brand-400/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/5 rounded-full blur-3xl"></div>
                 
-                <!-- Grid Pattern -->
-                <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-            </div>
-
-            <div class="sm:px-6 lg:px-8 lg:py-32 max-w-7xl mr-auto ml-auto pt-20 pr-4 pb-20 pl-4 relative">
-                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    
-                    <!-- Left Column: Content -->
-                    <div class="text-center lg:text-left">
-                        <!-- Badge -->
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-                            <span class="relative flex h-2 w-2">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                            </span>
-                            <span class="text-white/90 text-sm font-medium">Yapay Zeka Destekli Analiz</span>
-                        </div>
-
-                        <!-- Headline -->
-                        <h1 class="sm:text-5xl lg:text-6xl leading-tight text-4xl font-extrabold text-white tracking-tight mb-6 font-manrope" style="">Amerika'daki Şirketiniz <span class="bg-clip-text text-transparent font-manrope bg-gradient-to-tr from-orange-400 to-orange-600">Yasal Risk</span> Altında mı?</h1>
-
-                        <!-- Subheadline -->
-                        <p class="text-lg sm:text-xl text-white/70 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0">
-                            Yapay zeka destekli asistanımız ile şirket evraklarınızı ve yasal yükümlülüklerinizi saniyeler içinde kontrol edin. 
-                            <span class="text-white font-medium">Riskleri tespit edin, çözüm önerileri alın.</span>
-                        </p>
-
-                        <!-- Trust Indicators -->
-                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-white/60 text-sm">
-                            <div class="flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" class="lucide lucide-shield-check w-5 h-5 text-emerald-400"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
-                                <span>Güvenli &amp; Gizli</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" class="lucide lucide-zap w-5 h-5 text-amber-400"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
-                                <span class="">Anında Sonuç</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="globe" class="lucide lucide-globe w-5 h-5 text-brand-300"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-                                <span>50 Eyalet Desteği</span>
-                            </div>
-                        </div>
-
-                        <!-- Visual Element (Mobile Hidden) -->
-                        <div class="hidden lg:block mt-16 relative">
-                            <div class="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 max-w-md animate-float">
-                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-check" class="lucide lucide-file-check w-6 h-6 text-emerald-400"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m9 15 2 2 4-4"></path></svg>
-                                </div>
-                                <div class="">
-                                    <div class="text-white font-semibold text-sm">Annual Report Kontrolü</div>
-                                    <div class="text-xs text-white/60" style="">New Jersey - Uyumlu ✓</div>
-                                </div>
-                                <div class="ml-auto">
-                                    <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-medium">Tamamlandı</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column: Form -->
-                    <div class="relative" id="form-section">
-                        <div class="glass-card rounded-3xl shadow-2xl shadow-black/20 p-8 sm:p-10 border border-white/20">
-                            <!-- Form Header -->
-                            <div class="text-center mb-8" id="formHeader">
-                                <div class="inline-flex shadow-brand-500/30 w-14 h-14 rounded-2xl mb-4 shadow-lg items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="scan-search" class="lucide lucide-scan-search w-[28px] h-[28px]" data-icon-replaced="true" style="width: 28px; height: 28px; color: rgb(239, 109, 33);"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path><circle cx="12" cy="12" r="3"></circle><path d="m16 16-1.9-1.9"></path></svg>
-                                </div>
-                                <h2 class="text-2xl font-bold text-slate-900 mb-2 font-manrope" style="">Ücretsiz Analizi Başlatın</h2>
-                                <p class="text-sm text-slate-500" style="">Bilgilerinizi girin, yapay zeka asistanımıza erişim linki e-posta ile gönderilecek.</p>
-                            </div>
-
-                            <!-- Form -->
-                            <form id="leadForm" class="space-y-5">
-                                <!-- Ad Soyad -->
-                                <div class="">
-                                    <label for="fullName" class="block text-sm font-semibold text-slate-700 mb-2">
-                                        Ad Soyad <span class="text-red-500">*</span>
-                                    </label>
-                                    <div class="relative">
-                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user" class="lucide lucide-user w-5 h-5 text-slate-400"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                        </div>
-                                        <input type="text" id="fullName" name="fullName" required="" placeholder="Adınız ve soyadınız" class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all text-slate-900 placeholder:text-slate-400">
-                                    </div>
-                                </div>
-
-                                <!-- E-posta -->
-                                <div class="">
-                                    <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">
-                                        E-posta Adresi <span class="text-red-500">*</span>
-                                    </label>
-                                    <div class="relative">
-                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-5 h-5 text-slate-400"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
-                                        </div>
-                                        <input type="email" id="email" name="email" required="" placeholder="ornek@sirket.com" class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all text-slate-900 placeholder:text-slate-400">
-                                    </div>
-                                    <p class="mt-1.5 text-xs text-slate-500">GPT asistan linki bu adrese gönderilecek</p>
-                                </div>
-
-                                <!-- Şirket Adı -->
-                                <div class="">
-                                    <label for="companyName" class="block text-sm font-semibold text-slate-700 mb-2">
-                                        Şirket Adı <span class="text-slate-400 font-normal">(Opsiyonel)</span>
-                                    </label>
-                                    <div class="relative">
-                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building-2" class="lucide lucide-building-2 w-5 h-5 text-slate-400"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
-                                        </div>
-                                        <input type="text" id="companyName" name="companyName" placeholder="ABC Corporation LLC" class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all text-slate-900 placeholder:text-slate-400">
-                                    </div>
-                                </div>
-
-                                <!-- Kuruluş Eyaleti -->
-                                <div>
-                                    <label for="state" class="block text-sm font-semibold text-slate-700 mb-2">
-                                        Kuruluş Eyaleti <span class="text-red-500">*</span>
-                                    </label>
-                                    <div class="relative">
-                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-5 h-5 text-slate-400"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                        </div>
-                                        <select id="state" name="state" required="" class="w-full pl-12 pr-10 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all text-slate-900 appearance-none cursor-pointer">
-                                            <option value="" disabled="" selected="">Eyalet seçin</option>
-                                            <option value="delaware">Delaware</option>
-                                            <option value="wyoming">Wyoming</option>
-                                            <option value="florida">Florida</option>
-                                            <option value="texas">Texas</option>
-                                            <option value="california">California</option>
-                                            <option value="new-york">New York</option>
-                                            <option value="nevada">Nevada</option>
-                                            <option value="other">Diğer</option>
-                                        </select>
-                                        <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-5 h-5 text-slate-400"><path d="m6 9 6 6 6-6"></path></svg>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Submit Button -->
-                                <button type="submit" id="submitBtn" class="w-full mt-4 py-4 px-6 rounded-xl bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white font-semibold text-lg shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3">
-                                    <span>Erişim Linki Gönder</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send w-5 h-5"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
-                                </button>
-
-                                <!-- Privacy Note -->
-                                <p class="text-center text-xs text-slate-500 mt-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" class="lucide lucide-lock w-3 h-3 inline-block mr-1"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                                    Bilgileriniz güvenli bir şekilde saklanır ve üçüncü taraflarla paylaşılmaz.
-                                </p>
-                            </form>
-
-                            <!-- Success Message (Hidden by default) -->
-                            <div id="successMessage" class="hidden text-center py-8">
-                                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-emerald-100 mb-6">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail-check" class="lucide lucide-mail-check w-10 h-10 text-emerald-600"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"></path><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path><path d="m16 19 2 2 4-4"></path></svg>
-                                </div>
-                                <h3 class="text-2xl font-bold text-slate-900 mb-3 font-manrope" style="">Talebiniz Alındı!</h3>
-                                <p class="text-slate-600 mb-6 max-w-sm mx-auto">
-                                    <span class="font-semibold text-brand-600">MAB U.S. Entity Review</span> GPT asistanına erişim linki en kısa sürede e-posta adresinize gönderilecektir.
-                                </p>
-                                
-                                <!-- Email Info Box -->
-                                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 mb-6">
-                                    <div class="flex items-center justify-center gap-3 mb-3">
-                                        <div class="w-10 h-10 rounded-xl bg-brand-100 flex items-center justify-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="inbox" class="lucide lucide-inbox w-5 h-5 text-brand-600"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
-                                        </div>
-                                        <div class="text-left">
-                                            <div class="text-xs text-slate-500">Gönderen</div>
-                                            <div class="text-sm font-semibold text-slate-900">info@mehmetakifbirkan.com</div>
-                                        </div>
-                                    </div>
-                                    <p class="text-xs text-slate-500">
-                                        E-posta gelen kutunuzu ve spam klasörünüzü kontrol etmeyi unutmayın.
-                                    </p>
-                                </div>
-
-                                <!-- What's Next -->
-                                <div class="text-left bg-brand-50 border border-brand-100 rounded-2xl p-5">
-                                    <h4 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="list-checks" class="lucide lucide-list-checks w-5 h-5 text-brand-600"><path d="M13 5h8"></path><path d="M13 12h8"></path><path d="M13 19h8"></path><path d="m3 17 2 2 4-4"></path><path d="m3 7 2 2 4-4"></path></svg>
-                                        Sonraki Adımlar
-                                    </h4>
-                                    <ul class="space-y-2 text-sm text-slate-600">
-                                        <li class="flex items-start gap-2">
-                                            <span class="w-5 h-5 rounded-full bg-brand-600 text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
-                                            <span>E-postanızı kontrol edin</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="w-5 h-5 rounded-full bg-brand-600 text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
-                                            <span>GPT asistan linkine tıklayın</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="w-5 h-5 rounded-full bg-brand-600 text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
-                                            <span>Şirket analizinizi başlatın</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- Contact Support -->
-                                <p class="mt-6 text-xs text-slate-500">
-                                    E-posta almadıysanız, 
-                                    <a href="mailto:info@mehmetakifbirkan.com" class="text-brand-600 hover:text-brand-700 font-medium">
-                                        info@mehmetakifbirkan.com
-                                    </a> 
-                                    adresinden bize ulaşabilirsiniz.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Decorative -->
-                        <div class="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-3xl bg-brand-200/30 blur-sm"></div>
-                    </div>
+                <div class="hidden md:flex items-center gap-6 text-sm font-normal text-gray-500">
+                    <a href="#features" class="hover:text-gray-900 transition-colors">Özellikler</a>
+                    <a href="#how-it-works" class="hover:text-gray-900 transition-colors">Nasıl Çalışır</a>
+                    <a href="#form-section" class="hover:text-gray-900 transition-colors">Başvuru</a>
                 </div>
             </div>
 
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 text-white/50">
-                <span class="text-xs font-medium">Daha Fazla</span>
-                <div class="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
-                    <div class="w-1.5 h-3 rounded-full bg-white/50 animate-bounce"></div>
+            <div class="flex items-center gap-4">
+                <a href="mailto:info@mehmetakifbirkan.com" class="hidden md:flex items-center gap-2 text-sm font-normal text-gray-500 hover:text-gray-900 transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    İletişim
+                </a>
+                <a href="#form-section" class="px-5 py-2 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-all shadow-lg shadow-gray-900/10">
+                    Analize Başla
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative pt-12 pb-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto text-center px-6 relative z-10">
+                
+                <div class="flex items-center justify-center gap-2 mb-8">
+                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Powered by</span>
+                    <div class="flex items-center gap-1 text-xs font-semibold text-gray-900">
+                        <i data-lucide="sparkles" class="w-3 h-3 text-amber-500"></i>
+                        Yapay Zeka
+                    </div>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-medium text-gray-900 tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto">
+                    Amerika'daki Şirketiniz<br>
+                    <span class="text-gray-400">Yasal Risk Altında mı?</span>
+                </h1>
+                
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                    Yapay zeka destekli asistanımız ile şirket evraklarınızı ve yasal yükümlülüklerinizi saniyeler içinde kontrol edin. Riskleri tespit edin, çözüm önerileri alın.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+                    <a href="#form-section" class="px-8 py-3.5 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 hover:shadow-xl hover:shadow-gray-900/10 transition-all w-full sm:w-auto">
+                        Ücretsiz Analiz Başlat
+                    </a>
+                    <a href="#how-it-works" class="px-8 py-3.5 rounded-full bg-white text-gray-900 border border-gray-200 text-sm font-medium hover:bg-gray-50 transition-all w-full sm:w-auto flex items-center gap-2 justify-center">
+                        <i data-lucide="play-circle" class="w-4 h-4"></i>
+                        Nasıl Çalışır?
+                    </a>
+                </div>
+
+                <!-- Dashboard Preview -->
+                <div class="relative mx-auto max-w-5xl">
+                    <div class="absolute -inset-10 bg-gradient-to-tr from-gray-200 via-gray-100 to-white rounded-[3rem] -z-10 grain-overlay opacity-80"></div>
+                    
+                    <div class="rounded-xl bg-dark-900 p-2 shadow-2xl border border-white/10 ring-1 ring-gray-900/5">
+                        <div class="rounded-lg bg-dark-800 border border-white/5 overflow-hidden relative aspect-[16/9] flex flex-col">
+                            <!-- Dashboard Header -->
+                            <div class="h-12 border-b border-white/5 flex items-center justify-between px-4 bg-dark-900/50">
+                                <div class="flex items-center gap-4">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+                                    </div>
+                                    <div class="h-4 w-px bg-white/10 mx-2"></div>
+                                    <div class="flex items-center gap-2 text-xs text-gray-400 bg-white/5 px-2 py-1 rounded">
+                                        <i data-lucide="lock" class="w-3 h-3"></i>
+                                        mab-entity-review.ai
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-[10px] text-white font-bold">M</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dashboard Content -->
+                            <div class="flex-1 p-6 flex gap-6">
+                                <!-- Sidebar -->
+                                <div class="w-48 hidden md:flex flex-col gap-4 border-r border-white/5 pr-6">
+                                    <div class="space-y-1">
+                                        <div class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Menü</div>
+                                        <div class="flex items-center gap-2 text-sm text-white bg-white/5 px-3 py-2 rounded-md"><i data-lucide="layout-dashboard" class="w-4 h-4"></i> Genel Bakış</div>
+                                        <div class="flex items-center gap-2 text-sm text-gray-400 px-3 py-2 hover:text-white transition-colors"><i data-lucide="file-text" class="w-4 h-4"></i> Belgeler</div>
+                                        <div class="flex items-center gap-2 text-sm text-gray-400 px-3 py-2 hover:text-white transition-colors"><i data-lucide="alert-triangle" class="w-4 h-4"></i> Riskler</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Main Area -->
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-end mb-6">
+                                        <div>
+                                            <h3 class="text-xl font-medium text-white">Şirket Analizi</h3>
+                                            <p class="text-sm text-gray-500">Delaware LLC - Uyumluluk Durumu</p>
+                                        </div>
+                                        <button class="text-xs bg-white text-black px-3 py-1.5 rounded font-medium hover:bg-gray-100">+ Yeni Analiz</button>
+                                    </div>
+
+                                    <!-- Stats Grid -->
+                                    <div class="grid grid-cols-4 gap-4 mb-6">
+                                        <div class="bg-white/5 border border-white/5 p-4 rounded-lg">
+                                            <div class="text-xs text-gray-400 mb-1">Uyumluluk</div>
+                                            <div class="text-2xl font-medium text-white">92%</div>
+                                            <div class="text-[10px] text-emerald-400 mt-1 flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i> İyi</div>
+                                        </div>
+                                        <div class="bg-white/5 border border-white/5 p-4 rounded-lg">
+                                            <div class="text-xs text-gray-400 mb-1">Belgeler</div>
+                                            <div class="text-2xl font-medium text-white">8/10</div>
+                                            <div class="text-[10px] text-amber-400 mt-1 flex items-center gap-1"><i data-lucide="alert-circle" class="w-3 h-3"></i> 2 eksik</div>
+                                        </div>
+                                        <div class="bg-white/5 border border-white/5 p-4 rounded-lg">
+                                            <div class="text-xs text-gray-400 mb-1">Son Kontrol</div>
+                                            <div class="text-2xl font-medium text-white">Bugün</div>
+                                            <div class="text-[10px] text-gray-500 mt-1">14:32</div>
+                                        </div>
+                                        <div class="bg-white/5 border border-white/5 p-4 rounded-lg">
+                                            <div class="text-xs text-gray-400 mb-1">Eyalet</div>
+                                            <div class="text-2xl font-medium text-white">DE</div>
+                                            <div class="text-[10px] text-gray-500 mt-1">Delaware</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Table -->
+                                    <div class="border border-white/5 rounded-lg overflow-hidden">
+                                        <div class="grid grid-cols-12 gap-4 p-3 bg-white/5 text-xs font-medium text-gray-400 border-b border-white/5">
+                                            <div class="col-span-5">Kontrol Öğesi</div>
+                                            <div class="col-span-3">Durum</div>
+                                            <div class="col-span-4 text-right">Son Güncelleme</div>
+                                        </div>
+                                        <div class="grid grid-cols-12 gap-4 p-3 text-xs text-gray-300 border-b border-white/5 items-center hover:bg-white/5 transition-colors">
+                                            <div class="col-span-5 flex items-center gap-2">
+                                                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                                Annual Report
+                                            </div>
+                                            <div class="col-span-3"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20">Tamamlandı</span></div>
+                                            <div class="col-span-4 text-right text-gray-500">2 gün önce</div>
+                                        </div>
+                                        <div class="grid grid-cols-12 gap-4 p-3 text-xs text-gray-300 border-b border-white/5 items-center hover:bg-white/5 transition-colors">
+                                            <div class="col-span-5 flex items-center gap-2">
+                                                <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                                                Franchise Tax
+                                            </div>
+                                            <div class="col-span-3"><span class="bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded border border-amber-500/20">Bekliyor</span></div>
+                                            <div class="col-span-4 text-right text-gray-500">Son: 1 Mart</div>
+                                        </div>
+                                        <div class="grid grid-cols-12 gap-4 p-3 text-xs text-gray-300 items-center hover:bg-white/5 transition-colors">
+                                            <div class="col-span-5 flex items-center gap-2">
+                                                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                                Registered Agent
+                                            </div>
+                                            <div class="col-span-3"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20">Aktif</span></div>
+                                            <div class="col-span-4 text-right text-gray-500">Güncel</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators -->
+        <section class="py-10 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-8 md:gap-16 text-gray-400">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500"></i>
+                    <span class="text-sm">Güvenli &amp; Gizli</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="zap" class="w-5 h-5 text-amber-500"></i>
+                    <span class="text-sm">Anında Sonuç</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="globe" class="w-5 h-5 text-blue-500"></i>
+                    <span class="text-sm">50 Eyalet Desteği</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-5 h-5 text-purple-500"></i>
+                    <span class="text-sm">7/24 Erişim</span>
                 </div>
             </div>
         </section>
 
         <!-- Features Section -->
-        <section class="py-24 bg-white relative overflow-hidden">
-            <!-- Background Pattern -->
-            <div class="[background-size:24px_24px] opacity-50 absolute top-0 right-0 bottom-0 left-0"></div>
-            
-            <div class="sm:px-6 lg:px-8 max-w-7xl mr-auto ml-auto pr-4 pl-4 relative">
-                <!-- Section Header -->
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 text-brand-700 text-sm font-semibold mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" class="lucide lucide-sparkles w-4 h-4"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
-                        Neden Kullanmalıyım?
-                    </span>
-                    <h2 class="sm:text-4xl text-3xl font-bold text-slate-900 tracking-tight mb-4 font-manrope" style="">Şirketinizi Korumak İçin <span class="text-brand-600 font-manrope" style="">Güçlü Özellikler</span></h2>
-                    <p class="text-lg text-slate-600">
-                        MAB U.S. Entity Review, Amerika'daki işletmenizi yasal risklerden korumak için tasarlandı.
-                    </p>
+        <section id="features" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Özellikler</span>
+                    <h2 class="text-3xl sm:text-4xl font-medium text-gray-900 tracking-tight mt-4 mb-4">Neden MAB U.S. Entity Review?</h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto">Amerika'daki işletmenizi yasal risklerden korumak için tasarlandı.</p>
                 </div>
 
-                <!-- Features Grid -->
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Feature 1 -->
-                    <div class="group relative p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 hover:border-slate-200 transition-all duration-500 hover:-translate-y-1">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center mb-6 shadow-lg shadow-brand-500/20 group-hover:scale-110 transition-transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock w-[28px] h-[28px]" data-icon-replaced="true" style="width: 28px; height: 28px; color: rgb(30, 63, 163)"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                    <div class="bg-gray-50 rounded-3xl p-10 flex flex-col justify-between h-[400px] border border-gray-100 group hover:shadow-lg transition-all duration-300">
+                        <div>
+                            <div class="text-sm font-medium text-blue-600 mb-2">7/24 Belge Kontrolü</div>
+                            <h3 class="text-2xl font-medium text-gray-900 mb-4 tracking-tight">İstediğiniz zaman şirket belgelerinizi kontrol edin.</h3>
+                            <p class="text-gray-500 leading-relaxed">Yapay zeka asistanımız her an yanınızda ve sorularınızı cevaplamaya hazır. Gece gündüz fark etmez.</p>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">7/24 Belge Kontrolü</h3>
-                        <p class="leading-relaxed text-slate-600 font-manrope">
-                            İstediğiniz zaman şirket belgelerinizi kontrol edin. Yapay zeka asistanımız her an yanınızda ve sorularınızı cevaplamaya hazır.
-                        </p>
-                        <div class="mt-6 flex items-center gap-2 text-brand-600 font-medium text-sm group-hover:gap-3 transition-all">
-                            <span class="font-manrope">Detayları Gör</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        
+                        <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 relative mt-8">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="check-circle" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">Annual Report Kontrolü</div>
+                                    <div class="text-xs text-gray-500 mt-1">
+                                        Delaware - Uyumlu ✓
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="group relative p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 hover:border-slate-200 transition-all duration-500 hover:-translate-y-1">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map" class="lucide lucide-map w-7 h-7 text-white"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg>
+                    <div class="bg-gray-50 rounded-3xl p-10 flex flex-col justify-between h-[400px] border border-gray-100 group hover:shadow-lg transition-all duration-300">
+                        <div>
+                            <div class="text-sm font-medium text-amber-600 mb-2">Eyalet Bazlı Analiz</div>
+                            <h3 class="text-2xl font-medium text-gray-900 mb-4 tracking-tight">Her eyaletin farklı yasal gereksinimleri var.</h3>
+                            <p class="text-gray-500 leading-relaxed">Delaware'den Florida'ya, Wyoming'den California'ya tüm eyaletlere özel analiz ve uyarı sistemi.</p>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 font-manrope mb-3">Eyalet Bazlı Risk Analizi</h3>
-                        <p class="leading-relaxed text-slate-600 font-manrope">
-                            Her eyaletin farklı yasal gereksinimleri var. Delaware'den Florida'ya tüm eyaletlere özel analiz ve uyarı sistemi.
-                        </p>
-                        <div class="mt-6 flex items-center gap-2 text-amber-600 font-medium text-sm group-hover:gap-3 transition-all">
-                            <span>Detayları Gör</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        
+                        <div class="flex items-center justify-center gap-4 mt-8">
+                            <div class="bg-white rounded-lg px-4 py-2 border border-gray-100 text-sm font-medium text-gray-700">Delaware</div>
+                            <div class="bg-white rounded-lg px-4 py-2 border border-gray-100 text-sm font-medium text-gray-700">Wyoming</div>
+                            <div class="bg-white rounded-lg px-4 py-2 border border-gray-100 text-sm font-medium text-gray-700">Florida</div>
+                            <div class="bg-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-500">+47</div>
                         </div>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="group relative p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 hover:border-slate-200 transition-all duration-500 hover:-translate-y-1">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lightbulb" class="lucide lucide-lightbulb w-7 h-7 text-white"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 font-manrope mb-3">Anlık Çözüm Önerileri</h3>
-                        <p class="leading-relaxed text-slate-600 font-manrope">
-                            Sadece sorunları tespit etmekle kalmıyoruz. Her risk için uygulanabilir çözüm önerileri ve adım adım rehberlik sunuyoruz.
-                        </p>
-                        <div class="mt-6 flex items-center gap-2 text-emerald-600 font-medium text-sm group-hover:gap-3 transition-all">
-                            <span class="">Detayları Gör</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Section -->
-                <div class="mt-20 text-center">
-                    <div class="inline-flex flex-col sm:flex-row gap-4 border-brand-100 border rounded-2xl px-6 py-6 gap-x-4 gap-y-4 items-center">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-full bg-brand-600 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="rocket" class="lucide lucide-rocket w-[24px] h-[24px]" data-icon-replaced="true" style="width: 24px; height: 24px"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
-                            </div>
-                            <div class="text-left">
-                                <div class="font-semibold text-slate-900 font-manrope">Hemen Başlayın</div>
-                                <div class="text-sm text-slate-600 font-manrope">Ücretsiz analiz için formu doldurun</div>
-                            </div>
-                        </div>
-                        <a href="#form-section" class="hover:bg-brand-700 transition-all shadow-brand-500/20 hover:shadow-xl hover:shadow-brand-500/30 font-semibold text-white rounded-xl pt-3 pr-6 pb-3 pl-6 shadow-lg">
-                            Analize Başla →
-                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
-        
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-24 bg-dark-900 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-medium text-gray-500 uppercase tracking-wider">Nasıl Çalışır?</span>
+                    <h2 class="text-3xl sm:text-4xl font-medium text-white tracking-tight mt-4 mb-4">3 Basit Adımda Başlayın</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Şirketinizin yasal uyumluluk durumunu öğrenmek hiç bu kadar kolay olmamıştı.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-6 border border-white/10">
+                            <span class="font-semibold text-gray-400 text-xl">1</span>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-3">Formu Doldurun</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Ad, e-posta ve şirket bilgilerinizi girin. 30 saniyeden kısa sürer.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-6 border border-white/10">
+                            <span class="font-semibold text-gray-400 text-xl">2</span>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-3">Talebinizi Gönderin</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">E-posta ile talebinizi bize iletin. En kısa sürede işleme alınacak.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-6 border border-white/10">
+                            <span class="font-semibold text-gray-400 text-xl">3</span>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-3">GPT Asistana Erişin</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Size özel GPT asistan linki e-posta ile gönderilecek. Hemen kullanmaya başlayın.</p>
+                    </div>
+                </div>
+
+                <div class="mt-20 pt-10 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+                    <div>
+                        <div class="text-4xl font-semibold text-white mb-1">500+</div>
+                        <div class="text-sm text-gray-400">Analiz Edilen Şirket</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-semibold text-white mb-1">50</div>
+                        <div class="text-sm text-gray-400">Eyalet Desteği</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-semibold text-white mb-1">%98</div>
+                        <div class="text-sm text-gray-400">Memnuniyet</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-semibold text-white mb-1">24/7</div>
+                        <div class="text-sm text-gray-400">Erişim</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section id="form-section" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-xl mx-auto">
+                    <div class="text-center mb-10">
+                        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gray-900 mb-6 shadow-lg shadow-gray-900/20">
+                            <i data-lucide="scan-search" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h2 class="text-3xl font-medium text-gray-900 tracking-tight mb-4">Analize Başlamak İçin</h2>
+                        <p class="text-gray-500">Bilgilerinizi girin, yapay zeka asistanımıza erişim linki e-posta ile gönderilecek</p>
+                    </div>
+
+                    <!-- Form -->
+                    <form id="leadForm" class="space-y-5 bg-gray-50 rounded-3xl p-8 border border-gray-100">
+                        <!-- Ad Soyad -->
+                        <div>
+                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">
+                                Ad Soyad <span class="text-red-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i data-lucide="user" class="w-5 h-5 text-gray-400"></i>
+                                </div>
+                                <input type="text" id="fullName" name="fullName" required="" placeholder="Adınız ve soyadınız" class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-white focus:bg-white focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10 transition-all text-gray-900 placeholder:text-gray-400 text-sm">
+                            </div>
+                        </div>
+
+                        <!-- E-posta -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                E-posta Adresi <span class="text-red-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i data-lucide="mail" class="w-5 h-5 text-gray-400"></i>
+                                </div>
+                                <input type="email" id="email" name="email" required="" placeholder="ornek@sirket.com" class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-white focus:bg-white focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10 transition-all text-gray-900 placeholder:text-gray-400 text-sm">
+                            </div>
+                            <p class="mt-1.5 text-xs text-gray-500">GPT asistan linki bu adrese gönderilecek</p>
+                        </div>
+
+                        <!-- Şirket Adı -->
+                        <div>
+                            <label for="companyName" class="block text-sm font-medium text-gray-700 mb-2">
+                                Şirket Adı <span class="text-gray-400 font-normal">(Opsiyonel)</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i data-lucide="building-2" class="w-5 h-5 text-gray-400"></i>
+                                </div>
+                                <input type="text" id="companyName" name="companyName" placeholder="ABC Corporation LLC" class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 bg-white focus:bg-white focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10 transition-all text-gray-900 placeholder:text-gray-400 text-sm">
+                            </div>
+                        </div>
+
+                        <!-- Kuruluş Eyaleti -->
+                        <div>
+                            <label for="state" class="block text-sm font-medium text-gray-700 mb-2">
+                                Kuruluş Eyaleti <span class="text-red-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-gray-400"></i>
+                                </div>
+                                <select id="state" name="state" required="" class="w-full pl-12 pr-10 py-3.5 rounded-xl border border-gray-200 bg-white focus:bg-white focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10 transition-all text-gray-900 appearance-none cursor-pointer text-sm">
+                                    <option value="" disabled="" selected="">Eyalet seçin</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="California">California</option>
+                                    <option value="New York">New York</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="Diğer">Diğer</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                                    <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitBtn" class="w-full mt-4 py-4 px-6 rounded-xl bg-gray-900 hover:bg-gray-800 text-white font-medium shadow-lg shadow-gray-900/10 hover:shadow-xl hover:shadow-gray-900/20 transition-all flex items-center justify-center gap-3">
+                            <span>Talep Gönder</span>
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+
+                        <!-- Privacy Note -->
+                        <p class="text-center text-xs text-gray-500 mt-4">
+                            <i data-lucide="lock" class="w-3 h-3 inline-block mr-1"></i>
+                            Bilgileriniz güvenli bir şekilde saklanır ve üçüncü taraflarla paylaşılmaz.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid Features -->
+        <section class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-gray-50 rounded-3xl p-8 h-80 flex flex-col relative overflow-hidden border border-gray-100">
+                        <div class="text-sm font-medium text-gray-400 mb-2">Anlık Çözüm Önerileri</div>
+                        <h3 class="text-xl font-medium text-gray-900 mb-4 tracking-tight">Her risk için uygulanabilir adımlar.</h3>
+                        
+                        <div class="absolute bottom-8 left-8 right-8 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2 text-xs">
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                    <span class="text-gray-900 font-medium">Annual Report - Dosyala</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs">
+                                    <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                                    <span class="text-gray-900 font-medium">Franchise Tax - Ödeme Yap</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs">
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                    <span class="text-gray-900 font-medium">EIN Doğrulama - Tamamlandı</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-gray-50 rounded-3xl p-8 h-80 flex flex-col relative overflow-hidden border border-gray-100">
+                        <div class="text-sm font-medium text-gray-400 mb-2">Yardıma mı ihtiyacınız var?</div>
+                        <h3 class="text-xl font-medium text-gray-900 mb-4 tracking-tight">WhatsApp Grubumuz</h3>
+                        
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <a href="https://chat.whatsapp.com/I0OTUcyWPrN6cwZB4NWCWo?mode=hqrt2" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-emerald-500 text-white p-4 rounded-xl hover:bg-emerald-600 transition-colors">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                                <div>
+                                    <div class="font-medium text-sm">ABD Şirket Sahipleri</div>
+                                    <div class="text-xs text-emerald-100">Gruba Katıl →</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-gray-50 rounded-3xl p-8 h-80 flex flex-col justify-end relative overflow-hidden border border-gray-100">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+                        
+                        <h3 class="text-5xl font-semibold text-gray-900 mb-2 tracking-tight text-center relative z-10">%92</h3>
+                        <p class="text-gray-500 text-sm text-center relative z-10">şirket sahipleri yasal yükümlülüklerinden<br>haberdar değil.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-6">
+            <div class="max-w-5xl mx-auto bg-dark-900 rounded-[2.5rem] p-16 text-center relative overflow-hidden grain-overlay">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="rocket" class="w-6 h-6 text-black"></i>
+                    </div>
+                    <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-2">Şirketinizi Korumaya Başlayın</h2>
+                    <p class="text-gray-400 mb-8 max-w-lg mx-auto">Yasal riskleri tespit edin, çözüm önerileri alın. Ücretsiz analiz için hemen başvurun.</p>
+                    <div class="mt-8 flex justify-center">
+                        <a href="#form-section" class="bg-white text-black px-8 py-4 rounded-full text-sm font-medium hover:scale-105 transition-transform inline-flex items-center gap-3">
+                            Ücretsiz Analiz Başlat
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-white">
-        <!-- Main Footer Content -->
-        <div class="sm:px-6 lg:px-8 font-manrope max-w-7xl mr-auto ml-auto pt-16 pr-4 pb-16 pl-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 gap-x-12 gap-y-12">
-                
-                <!-- Company Info -->
-                <div class="lg:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        
-                        <div class="">
-                            <div class="font-bold text-white text-base tracking-tight">MAB Global Partners</div>
-                            <div class="text-xs text-slate-500">U.S. Entity Review</div>
+    <footer class="bg-dark-900 text-gray-400 py-16 text-sm border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center">
+                            <span class="font-semibold text-sm">M</span>
                         </div>
+                        <span class="font-medium text-white text-sm">MAB Global Partners</span>
                     </div>
-                    <p class="leading-relaxed text-sm text-slate-50 mb-6">
-                        Amerika'daki şirketinizin yasal uyumluluğunu yapay zeka destekli sistemimizle analiz edin. Riskleri tespit edin, çözüm önerileri alın.
-                    </p>
-                    <!-- Social Links -->
-                    <div class="flex items-center gap-3">
-                        <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-colors group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="linkedin" class="lucide lucide-linkedin w-5 h-5 text-slate-400 group-hover:text-white transition-colors"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-colors group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter w-5 h-5 text-slate-400 group-hover:text-white transition-colors"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-colors group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="instagram" class="lucide lucide-instagram w-5 h-5 text-slate-400 group-hover:text-white transition-colors"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                        </a>
+                    <p class="text-gray-500 text-xs leading-relaxed mb-6">Amerika'daki şirketinizin yasal uyumluluğunu yapay zeka destekli sistemimizle analiz edin.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
                     </div>
                 </div>
-
-                <!-- Services -->
-                
-
-                <!-- Resources -->
-                
-
-                <!-- WhatsApp Groups -->
-                <div class="">
-                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-5">WhatsApp Gruplarımız</h4>
-                    <ul class="space-y-3">
-                        <li class="">
-                            <a href="https://chat.whatsapp.com/I0OTUcyWPrN6cwZB4NWCWo?mode=hqrt2" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/50 hover:bg-emerald-600/20 border border-slate-700 hover:border-emerald-500/50 transition-all group">
-                                <div class="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center flex-shrink-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" class="lucide lucide-message-circle w-5 h-5 text-white"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
-                                </div>
-                                <div class="">
-                                    <div class="group-hover:text-emerald-400 transition-colors text-sm font-medium text-white" style="">ABD Amazon Yardımlaşma</div>
-                                    <div class="text-xs text-slate-500">Gruba Katıl →</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="leading-relaxed text-xs text-slate-50 mt-4">
-                        Topluluğumuza katılın, sorularınızı sorun ve diğer girişimcilerle deneyimlerinizi paylaşın.
-                    </p>
+                <div>
+                    <div class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-4">Hizmetler</div>
+                    <div class="flex flex-col gap-3">
+                        <a href="#" class="hover:text-white transition-colors">Şirket Kuruluşu</a>
+                        <a href="#" class="hover:text-white transition-colors">Annual Report</a>
+                        <a href="#" class="hover:text-white transition-colors">Registered Agent</a>
+                        <a href="#" class="hover:text-white transition-colors">EIN Başvurusu</a>
+                    </div>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="">
-                    <h4 class="uppercase text-sm font-semibold text-white tracking-wider mb-5">İletişim</h4>
-                    <ul class="space-y-4">
-                        <li class="">
-                            <a href="mailto:info@mehmetakifbirkan.com" class="flex items-start gap-3 group">
-                                <div class="w-9 h-9 rounded-lg bg-slate-800 group-hover:bg-brand-600 flex items-center justify-center transition-colors flex-shrink-0 mt-0.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-4 h-4 text-slate-400 group-hover:text-white transition-colors"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
-                                </div>
-                                <div class="">
-                                    <div class="text-xs text-slate-500 mb-0.5">E-posta</div>
-                                    <div class="text-sm text-slate-300 group-hover:text-white transition-colors">info@mehmetakifbirkan.com</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="tel:+908501234567" class="flex items-start gap-3 group">
-                                <div class="w-9 h-9 rounded-lg bg-slate-800 group-hover:bg-brand-600 flex items-center justify-center transition-colors flex-shrink-0 mt-0.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" class="lucide lucide-phone w-4 h-4 text-slate-400 group-hover:text-white transition-colors"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
-                                </div>
-                                <div class="">
-                                    <div class="text-xs text-slate-500 mb-0.5">Telefon</div>
-                                    <div class="text-sm text-slate-300 group-hover:text-white transition-colors">+90 850 123 45 67</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <div class="flex items-start gap-3">
-                                <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-4 h-4 text-slate-400"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                </div>
-                                <div class="">
-                                    <div class="text-xs text-slate-500 mb-0.5">Adres</div>
-                                    <div class="text-sm text-slate-300">İstanbul, Türkiye</div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-4">Kaynaklar</div>
+                    <div class="flex flex-col gap-3">
+                        <a href="#" class="hover:text-white transition-colors">Blog</a>
+                        <a href="#" class="hover:text-white transition-colors">Eyalet Rehberleri</a>
+                        <a href="#" class="hover:text-white transition-colors">SSS</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-4">İletişim</div>
+                    <div class="flex flex-col gap-3">
+                        <a href="mailto:info@mehmetakifbirkan.com" class="hover:text-white transition-colors flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            info@mehmetakifbirkan.com
+                        </a>
+                        <a href="https://chat.whatsapp.com/I0OTUcyWPrN6cwZB4NWCWo?mode=hqrt2" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            WhatsApp Grubu
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Newsletter Section -->
-        <div class="border-t border-slate-800">
-            
-        </div>
-
-        <!-- Bottom Bar -->
-        <div class="border-t border-slate-800">
-            <div class="sm:px-6 lg:px-8 bg-[#1e3fa6] max-w-7xl mr-auto ml-auto pt-6 pr-4 pb-6 pl-4">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p class="md:text-left text-sm text-slate-50 text-center">
-                        © 2025 MEHMET AKİF BİRKAN DANIŞMANLIK LİMİTED ŞİRKETİ. Tüm hakları saklıdır.
-                    </p>
-                    <div class="flex items-center gap-6 text-sm">
-                        <a href="#" class="hover:text-slate-300 transition-colors text-slate-50">Gizlilik Politikası</a>
-                        <a href="#" class="hover:text-slate-300 transition-colors text-slate-50">Kullanım Koşulları</a>
-                        <a href="#" class="hover:text-slate-300 transition-colors text-slate-50">Çerez Politikası</a>
-                    </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-800">
+                <div class="text-xs text-gray-600">
+                    © 2025 MEHMET AKİF BİRKAN DANIŞMANLIK LİMİTED ŞİRKETİ. Tüm hakları saklıdır.
+                </div>
+                <div class="flex items-center gap-6 text-xs">
+                    <a href="#" class="hover:text-white transition-colors">Gizlilik Politikası</a>
+                    <a href="#" class="hover:text-white transition-colors">Kullanım Koşulları</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Form Submission Handler
+        // Form Submission Handler - Opens email client
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -535,25 +585,28 @@ animation: pulse-slow 4s ease-in-out infinite;
                 return;
             }
             
-            // Store form data (in real scenario, send to server)
-            const formData = {
-                fullName: fullName,
-                email: email,
-                companyName: companyName,
-                state: state,
-                gptLink: 'https://chatgpt.com/g/g-68d3a429ad388191b737f164feb1e749-mab-u-s-entity-review',
-                timestamp: new Date().toISOString()
-            };
+            // Prepare email content
+            const subject = encodeURIComponent('MAB U.S. Entity Review - GPT Asistan Erişim Talebi');
+            const body = encodeURIComponent(
+`Merhaba,
+
+MAB U.S. Entity Review GPT asistanına erişim talep ediyorum.
+
+Bilgilerim:
+- Ad Soyad: ${fullName}
+- E-posta: ${email}
+- Şirket Adı: ${companyName || 'Belirtilmedi'}
+- Kuruluş Eyaleti: ${state}
+
+İlgili AI aracının adı: MAB U.S. Entity Review
+
+Bana göndermenizi rica ederim.
+
+Teşekkürler.`
+            );
             
-            console.log('Form Data to be sent via email from info@mehmetakifbirkan.com:', formData);
-            
-            // Hide form and header, show success message
-            document.getElementById('leadForm').classList.add('hidden');
-            document.getElementById('formHeader').classList.add('hidden');
-            document.getElementById('successMessage').classList.remove('hidden');
-            
-            // Re-initialize icons for the success message
-            lucide.createIcons();
+            // Open email client
+            window.location.href = `mailto:info@mehmetakifbirkan.com?subject=${subject}&body=${body}`;
         });
 
         // Smooth scroll for anchor links
